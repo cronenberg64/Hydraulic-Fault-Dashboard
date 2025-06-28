@@ -38,18 +38,13 @@ RUN apt-get update && apt-get install -y \
     gcc \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy backend requirements and install
-COPY backend/requirements.txt ./
+# Copy backend requirements and backend code, then install dependencies
+COPY backend/ ./backend/
+WORKDIR /app/backend
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend code
 COPY backend/ ./
-
-# Set the working directory to backend for backend service
-WORKDIR /app/backend
-
-# Install backend dependencies
-RUN pip install --no-cache-dir -r requirements.txt
 
 # Final stage - serve both frontend and backend
 FROM python:3.11-slim
