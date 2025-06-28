@@ -1,5 +1,8 @@
+# Hydraulic Fault Dashboard
 
-# Hydraulic Fault Prediction Dashboard
+🚀 **Live Demo:** [hydraulic-fault-dashboard.onrender.com](https://hydraulic-fault-dashboard.onrender.com)
+
+---
 
 A comprehensive real-time hydraulic system monitoring dashboard with fault simulation, anomaly detection, and predictive analytics capabilities.
 
