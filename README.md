@@ -3,7 +3,7 @@
 
 A comprehensive real-time hydraulic system monitoring dashboard with fault simulation, anomaly detection, and predictive analytics capabilities.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Using Docker (Recommended)
 ```bash
@@ -29,14 +29,14 @@ Access at: http://localhost:3000
    npm run dev
    ```
 
-## 🔐 Authentication
+## Authentication
 
 Default credentials:
 - **Admin**: `admin` / `admin123` (Full access)
 - **Operator**: `operator` / `operator123` (Control access)
 - **Viewer**: `viewer` / `viewer123` (Read-only)
 
-## 🌟 Features
+## Features
 
 ### Core Monitoring
 - **Real-time Parameter Tracking**: Pressure, temperature, flow rate
@@ -68,7 +68,7 @@ Default credentials:
 - **Data Export**: JSON export capabilities
 - **Filtering System**: Advanced log filtering
 
-## 🏗️ Architecture
+## Architecture
 
 ### Technology Stack
 - **Frontend**: React 18, TypeScript, Tailwind CSS, shadcn/ui
@@ -91,7 +91,7 @@ Default credentials:
 └─ Data Visualization └─ Health Monitoring
 ```
 
-## 📊 API Documentation
+## API Documentation
 
 ### Core Endpoints
 - `GET /status` - System status and health
@@ -113,7 +113,7 @@ Default credentials:
 
 Visit `http://localhost:8000/docs` for interactive API documentation.
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Deployment
 ```bash
@@ -138,7 +138,7 @@ Supported platforms:
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
-## 🔧 Development
+## Development
 
 ### Project Structure
 ```
@@ -178,7 +178,7 @@ black .                 # Format code
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 ### Health Checks
 - Application health: `GET /health`
@@ -196,7 +196,7 @@ black .                 # Format code
 - ML model accuracy
 - User activity tracking
 
-## 🛡️ Security
+## Security
 
 ### Security Features
 - JWT-based authentication
@@ -213,7 +213,7 @@ black .                 # Format code
 - API endpoint protection
 - Audit logging
 
-## 📚 Documentation
+## Documentation
 
 - [Deployment Guide](DEPLOYMENT.md)
 - [API Documentation](http://localhost:8000/docs)
@@ -221,30 +221,13 @@ black .                 # Format code
 - [Security Guide](docs/security.md)
 - [Contributing Guidelines](CONTRIBUTING.md)
 
-## 🤝 Support
-
-### Getting Help
-- 📧 Email: support@hydraulic-dashboard.com
-- 🐛 Issues: [GitHub Issues](https://github.com/your-org/hydraulic-dashboard/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/your-org/hydraulic-dashboard/discussions)
-- 📖 Wiki: [Project Wiki](https://github.com/your-org/hydraulic-dashboard/wiki)
-
-### Community
-- Join our Discord server
-- Follow updates on Twitter
-- Star the repository if you find it useful!
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with [React](https://reactjs.org/) and [FastAPI](https://fastapi.tiangolo.com/)
 - UI components by [shadcn/ui](https://ui.shadcn.com/)
 - Icons by [Lucide](https://lucide.dev/)
 - Charts by [Recharts](https://recharts.org/)
-
----
-
-**Version**: 1.0.0 | **Last Updated**: December 2024
