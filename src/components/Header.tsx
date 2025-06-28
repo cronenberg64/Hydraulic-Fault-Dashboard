@@ -1,4 +1,3 @@
-
 import { Shield, Settings, User, Bell, Database } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -11,7 +10,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ 
-  title = "Hydraulic Fault Prediction Dashboard",
+  title = "Hydraulic Fault Dashboard",
   subtitle = "Real-time monitoring with AI-powered fault detection",
   showStatus = true,
   connectionStatus = 'connected'
@@ -46,14 +45,11 @@ export const Header = ({
     <header className="bg-slate-800 border-b border-slate-700 sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo and Title */}
+          {/* Title Only (Logo Removed) */}
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-8 h-8 text-blue-400" />
-              <div>
-                <h1 className="text-xl font-bold text-white">{title}</h1>
-                <p className="text-sm text-slate-400">{subtitle}</p>
-              </div>
+            <div>
+              <h1 className="text-xl font-bold text-white">{title}</h1>
+              <p className="text-sm text-slate-400">{subtitle}</p>
             </div>
           </div>
 
