@@ -19,9 +19,14 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/Dockerfile
+    working_dir: /app/backend
+    command: python run.py
     ports:
       - "8000:8000"
+    environment:
+      - PORT=8000
 
 volumes:
   hydraulic_data:
