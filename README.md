@@ -1,236 +1,95 @@
 # Hydraulic Fault Dashboard
 
-🚀 **Live Demo:** [hydraulic-fault-dashboard.onrender.com](https://hydraulic-fault-dashboard.onrender.com)
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-8B5CF6?logo=react)](https://ui.shadcn.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikitlearn)](https://scikit-learn.org/)
+[![Recharts](https://img.shields.io/badge/Recharts-Visualization-FF6384?logo=recharts)](https://recharts.org/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-A comprehensive real-time hydraulic system monitoring dashboard with fault simulation, anomaly detection, and predictive analytics capabilities.
+# Hydraulic Fault Dashboard
 
-## Quick Start
+**Live Demo:** [hydraulic-fault-dashboard.onrender.com](https://hydraulic-fault-dashboard.onrender.com)
 
-### Using Docker (Recommended)
-```bash
-git clone <repository-url>
-cd hydraulic-dashboard
-docker-compose up -d
-```
-Access at: http://localhost:3000
+Hydraulic Fault Dashboard is a real-time monitoring and analytics platform for hydraulic systems. It features live data visualization, fault simulation, machine learning-based anomaly detection, and predictive maintenance tools—all in a modern, responsive web interface.
 
-### Manual Setup
-1. **Backend Setup:**
-   ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate  # Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   python run.py
-   ```
-
-2. **Frontend Setup:**
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-## Authentication
-
-Default credentials:
-- **Admin**: `admin` / `admin123` (Full access)
-- **Operator**: `operator` / `operator123` (Control access)
-- **Viewer**: `viewer` / `viewer123` (Read-only)
+---
 
 ## Features
 
-### Core Monitoring
-- **Real-time Parameter Tracking**: Pressure, temperature, flow rate
-- **System Health Status**: Visual indicators with automatic fault detection
-- **Historical Data Visualization**: Interactive time-series charts
-- **Alert System**: Real-time notifications with severity levels
+- **Real-time Monitoring:** Track pressure, temperature, and flow with live charts.
+- **Fault Simulation:** Inject and visualize system faults (leaks, overheating, cavitation, sensor noise).
+- **AI/ML Analytics:** Isolation Forest-based anomaly detection and predictive analytics.
+- **Role-based Access:** Admin, Operator, and Viewer roles with secure authentication.
+- **Service History:** Maintenance records, event logs, and exportable data.
+- **Modern UI:** Built with React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-### Advanced Analytics
-- **Machine Learning Integration**: Isolation Forest anomaly detection
-- **Predictive Analytics**: Days-to-failure calculations
-- **Risk Assessment**: ML-driven risk level analysis
-- **Trend Analysis**: Automated pattern recognition
+---
 
-### Security & Access Control
-- **Role-based Authentication**: Admin, Operator, Viewer roles
-- **Permission System**: Granular access control
-- **Session Management**: Secure token-based authentication
-- **Audit Logging**: Complete system activity tracking
+## Tech Stack
 
-### Fault Simulation
-- **Pressure Drop**: Simulates hydraulic leaks
-- **Temperature Spike**: Overheating scenarios
-- **Flow Disruption**: Cavitation effects
-- **Sensor Noise**: Equipment malfunction simulation
+- **Frontend:** React 18, TypeScript, Tailwind CSS, shadcn/ui, Recharts
+- **Backend:** Python 3.11, FastAPI, Pydantic
+- **ML/AI:** Scikit-learn (Isolation Forest)
+- **Other:** Vite, Supabase (optional), Docker (for backend)
 
-### Service Management
-- **Service History**: Complete maintenance records
-- **Event Logging**: System activity tracking
-- **Data Export**: JSON export capabilities
-- **Filtering System**: Advanced log filtering
+---
 
-## Architecture
+## Quick Start
 
-### Technology Stack
-- **Frontend**: React 18, TypeScript, Tailwind CSS, shadcn/ui
-- **Backend**: Python 3.11, FastAPI, Pydantic
-- **ML/AI**: Scikit-learn, Isolation Forest
-- **Visualization**: Recharts
-- **Containerization**: Docker, Docker Compose
-- **CI/CD**: GitHub Actions
-
-### System Components
-```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   React App     │────│   FastAPI        │────│   ML Engine     │
-│   (Frontend)    │    │   (Backend)      │    │   (Analytics)   │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-│                      │                      │
-├─ Authentication     ├─ Data Simulation    ├─ Anomaly Detection
-├─ Real-time UI       ├─ Fault Injection    ├─ Predictive Models
-├─ Notifications      ├─ API Endpoints      └─ Risk Assessment
-└─ Data Visualization └─ Health Monitoring
-```
-
-## API Documentation
-
-### Core Endpoints
-- `GET /status` - System status and health
-- `GET /data/current` - Latest hydraulic data
-- `GET /data/historical` - Historical data points
-- `POST /simulation/start` - Start data simulation
-- `POST /simulation/stop` - Stop simulation
-- `POST /simulation/reset` - Reset system state
-
-### Fault Management
-- `POST /faults/inject/{fault_type}` - Inject specific faults
-- `GET /faults/types` - Available fault types
-- `GET /service/logs` - Service history logs
-
-### Machine Learning
-- `POST /ml/train` - Train anomaly detection model
-- `GET /ml/predict` - Get failure predictions
-- `GET /ml/metrics` - Model performance metrics
-
-Visit `http://localhost:8000/docs` for interactive API documentation.
-
-## Deployment
-
-### Production Deployment
 ```bash
-# Build production image
-docker build -t hydraulic-dashboard:latest .
-
-# Deploy with production settings
-docker run -d \
-  --name hydraulic-dashboard \
-  -p 80:80 \
-  -v hydraulic_data:/app/data \
-  --restart unless-stopped \
-  hydraulic-dashboard:latest
+# Clone and install frontend
+git clone <repo-url>
+cd Hydraulic-Fault-Dashboard
+npm install
+npm run dev
 ```
 
-### Cloud Deployment
-Supported platforms:
-- **AWS**: ECS, EC2, Lambda
-- **Google Cloud**: Cloud Run, Compute Engine
-- **Azure**: Container Instances, App Service
-- **Kubernetes**: Helm charts available
+- For backend setup, see `backend/README.md` or run:
+  ```bash
+  cd backend
+  pip install -r requirements.txt
+  python run.py
+  ```
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+---
 
-## Development
+## Usage
 
-### Project Structure
+1. Open the dashboard in your browser (see live demo or local dev URL)
+2. Log in with your credentials (admin/operator/viewer)
+3. Start simulation, inject faults, and monitor system health
+4. View analytics, export data, and manage service history
+
+---
+
+## Project Structure
+
 ```
-├── src/
-│   ├── components/          # React components
-│   ├── hooks/              # Custom hooks
-│   ├── pages/              # Page components
-│   └── lib/                # Utilities
-├── backend/
-│   ├── main.py             # FastAPI application
-│   ├── ml_models.py        # ML implementations
-│   └── requirements.txt    # Python dependencies
-├── docker/                 # Docker configuration
-├── .github/workflows/      # CI/CD pipelines
-└── docs/                   # Documentation
-```
-
-### Development Commands
-```bash
-# Frontend development
-npm run dev              # Start dev server
-npm run build           # Build for production
-npm run lint            # Run ESLint
-npm run test            # Run tests
-
-# Backend development
-cd backend
-python run.py           # Start backend server
-pytest                  # Run tests
-black .                 # Format code
+Hydraulic-Fault-Dashboard/
+├── src/           # Frontend (React, Vite)
+├── backend/       # Backend (FastAPI, ML)
+├── public/        # Static assets
+├── env.example    # Environment variables
+└── ...            # Config, scripts, etc.
 ```
 
-### Contributing
+---
+
+## Contributing
+
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Monitoring & Observability
-
-### Health Checks
-- Application health: `GET /health`
-- System metrics: `GET /metrics`
-- Database status: `GET /db/status`
-
-### Logging
-- Application logs: `/var/log/hydraulic-dashboard/`
-- Access logs: `/var/log/nginx/`
-- Error tracking: Integrated error reporting
-
-### Performance Metrics
-- Response times
-- System resource usage
-- ML model accuracy
-- User activity tracking
-
-## Security
-
-### Security Features
-- JWT-based authentication
-- Role-based access control
-- HTTPS/SSL encryption
-- Input validation and sanitization
-- Rate limiting
-- Security headers
-
-### Security Best Practices
-- Regular security updates
-- Secure configuration management
-- Database connection encryption
-- API endpoint protection
-- Audit logging
-
-## Documentation
-
-- [Deployment Guide](DEPLOYMENT.md)
-- [API Documentation](http://localhost:8000/docs)
-- [Architecture Overview](docs/architecture.md)
-- [Security Guide](docs/security.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with [React](https://reactjs.org/) and [FastAPI](https://fastapi.tiangolo.com/)
-- UI components by [shadcn/ui](https://ui.shadcn.com/)
-- Icons by [Lucide](https://lucide.dev/)
-- Charts by [Recharts](https://recharts.org/)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
