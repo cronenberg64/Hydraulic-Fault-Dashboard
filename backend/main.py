@@ -300,8 +300,8 @@ def generate_data_point():
 
 # API Endpoints
 @app.get("/")
-async def root():
-    return {"message": "Hydraulic Fault Simulation API with ML Integration"}
+def root():
+    return {"status": "ok"}
 
 @app.get("/status", response_model=SystemStatus)
 async def get_status():
