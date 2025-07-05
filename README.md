@@ -13,9 +13,20 @@
 
 # Hydraulic Fault Dashboard
 
-**Live Demo:** [hydraulic-fault-dashboard.onrender.com](https://hydraulic-fault-dashboard.onrender.com)
+**Live Demo:**
+- Frontend: [hydraulic-fault-dashboard.netlify.app](https://hydraulic-fault-dashboard.netlify.app)
+- Backend API: [backend-icy-mountain-7835.fly.dev](https://backend-icy-mountain-7835.fly.dev)
 
 Hydraulic Fault Dashboard is a real-time monitoring and analytics platform for hydraulic systems. It features live data visualization, fault simulation, machine learning-based anomaly detection, and predictive maintenance tools—all in a modern, responsive web interface.
+
+---
+
+## Deployment
+
+- **Frontend** is deployed on [Netlify](https://hydraulic-fault-dashboard.netlify.app)
+- **Backend API** is deployed on [Fly.io](https://backend-icy-mountain-7835.fly.dev)
+
+You can access the dashboard UI via the Netlify link above. The frontend communicates with the FastAPI backend hosted on Fly.io for real-time data, analytics, and ML predictions.
 
 ---
 
