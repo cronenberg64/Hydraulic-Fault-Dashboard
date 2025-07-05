@@ -3,6 +3,7 @@ import { Heart, Wifi, Database, Server, AlertCircle, CheckCircle } from 'lucide-
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './ui/tooltip';
+import { endpoints } from "@/config/environment";
 
 interface HealthStatus {
   api: 'healthy' | 'degraded' | 'down';
@@ -32,7 +33,7 @@ export const HealthCheckMonitor = () => {
 
       try {
         // Check API health
-        const apiResponse = await fetch('http://localhost:8000/health', {
+        const apiResponse = await fetch(endpoints.health, {
           method: 'GET',
           timeout: 5000
         } as any);

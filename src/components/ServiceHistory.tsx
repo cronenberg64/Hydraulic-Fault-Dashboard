@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { endpoints } from "@/config/environment";
 
 interface ServiceLogEntry {
   id: string;
@@ -54,7 +55,7 @@ export const ServiceHistory = () => {
       if (logFilters.component !== 'all') params.append('component', logFilters.component);
       params.append('limit', '50');
 
-      const response = await fetch(`http://localhost:8000/service-logs?${params}`);
+      const response = await fetch(`${endpoints.serviceLogs}?${params}`);
       if (response.ok) {
         const data = await response.json();
         setServiceLogs(data.logs);
@@ -75,7 +76,7 @@ export const ServiceHistory = () => {
       if (maintenanceFilters.status !== 'all') params.append('status', maintenanceFilters.status);
       params.append('limit', '50');
 
-      const response = await fetch(`http://localhost:8000/maintenance-records?${params}`);
+      const response = await fetch(`${endpoints.maintenanceRecords}?${params}`);
       if (response.ok) {
         const data = await response.json();
         setMaintenanceRecords(data.records);

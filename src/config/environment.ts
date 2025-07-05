@@ -1,4 +1,3 @@
-
 export const config = {
   apiBaseUrl: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000',
   wsUrl: import.meta.env.VITE_WS_URL || 'ws://localhost:8000',
@@ -25,5 +24,7 @@ export const endpoints = {
   ml: {
     train: `${config.apiBaseUrl}/ml/train`,
     predict: `${config.apiBaseUrl}/ml/predict`
-  }
+  },
+  serviceLogs: `${config.apiBaseUrl}/service-logs`,
+  maintenanceRecords: `${config.apiBaseUrl}/maintenance-records`
 };
