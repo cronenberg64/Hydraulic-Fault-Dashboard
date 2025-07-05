@@ -159,6 +159,7 @@ export const ServiceHistory = () => {
               variant={activeTab === 'maintenance' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setActiveTab('maintenance')}
+              className={activeTab !== 'maintenance' ? 'bg-white text-black hover:text-black hover:bg-gray-100' : ''}
             >
               Maintenance
             </Button>
