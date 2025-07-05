@@ -293,9 +293,19 @@ export const ServiceHistory = () => {
                       {new Date(log.timestamp).toLocaleString()}
                     </TableCell>
                     <TableCell className="text-slate-300">
-                      <Badge variant="outline" className="text-xs">
-                        {log.event_type.replace('_', ' ')}
-                      </Badge>
+                      {log.event_type === 'system' ? (
+                        <Badge className="bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 font-medium rounded-full px-3 py-1 text-xs border-0">
+                          System
+                        </Badge>
+                      ) : log.event_type === 'maintenance' ? (
+                        <Badge className="bg-amber-100 text-amber-900 dark:bg-amber-900 dark:text-amber-100 font-medium rounded-full px-3 py-1 text-xs border-0">
+                          Maintenance
+                        </Badge>
+                      ) : (
+                        <Badge variant="outline" className="text-xs">
+                          {log.event_type.replace('_', ' ')}
+                        </Badge>
+                      )}
                     </TableCell>
                     <TableCell>
                       {getSeverityBadge(log.severity)}
@@ -315,9 +325,23 @@ export const ServiceHistory = () => {
                       {new Date(record.timestamp).toLocaleDateString()}
                     </TableCell>
                     <TableCell className="text-slate-300">
-                      <Badge variant="outline" className="text-xs">
-                        {record.maintenance_type}
-                      </Badge>
+                      {record.maintenance_type === 'preventive' ? (
+                        <Badge className="bg-green-100 text-green-900 dark:bg-green-900 dark:text-green-100 font-medium rounded-full px-3 py-1 text-xs border-0">
+                          Preventive
+                        </Badge>
+                      ) : record.maintenance_type === 'corrective' ? (
+                        <Badge className="bg-red-100 text-red-900 dark:bg-red-900 dark:text-red-100 font-medium rounded-full px-3 py-1 text-xs border-0">
+                          Corrective
+                        </Badge>
+                      ) : record.maintenance_type === 'emergency' ? (
+                        <Badge className="bg-amber-100 text-amber-900 dark:bg-amber-900 dark:text-amber-100 font-medium rounded-full px-3 py-1 text-xs border-0">
+                          Emergency
+                        </Badge>
+                      ) : (
+                        <Badge variant="outline" className="text-xs">
+                          {record.maintenance_type}
+                        </Badge>
+                      )}
                     </TableCell>
                     <TableCell className="text-slate-300 text-sm">
                       {record.component.replace('_', ' ')}
