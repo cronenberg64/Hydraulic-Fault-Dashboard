@@ -22,7 +22,7 @@ app = FastAPI(title="Hydraulic Fault Simulation API", version="2.0.0")
 # Configure CORS to allow React frontend to connect
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "http://localhost:3000", "http://localhost:5173"],
+    allow_origins=["http://localhost:8080", "http://localhost:3000", "http://localhost:5173", "https://hydraulic-fault-dashboard.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
