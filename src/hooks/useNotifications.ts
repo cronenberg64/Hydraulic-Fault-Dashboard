@@ -19,16 +19,20 @@ export const useNotifications = () => {
     message: string,
     persistent = false
   ) => {
-    const notification: Notification = {
-      id: `${Date.now()}-${Math.random()}`,
-      type,
-      title,
-      message,
-      timestamp: Date.now(),
-      persistent
-    };
-
-    setNotifications(prev => [...prev, notification]);
+    // Prevent duplicate notifications with the same title and message
+    setNotifications(prev => {
+      const exists = prev.some(n => n.title === title && n.message === message);
+      if (exists) return prev;
+      const notification: Notification = {
+        id: `${Date.now()}-${Math.random()}`,
+        type,
+        title,
+        message,
+        timestamp: Date.now(),
+        persistent
+      };
+      return [...prev, notification];
+    });
   }, []);
 
   const dismissNotification = useCallback((id: string) => {
